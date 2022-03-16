@@ -37,7 +37,7 @@ public class App {
         if(validacaoMain == true){//verificacao do login
             System.out.println("Usuario conectado.");
         }else{
-            System.out.println("Usuario incorreto! O programa sera encerrado.");
+            System.out.println("Usuario incorreto! O programa sera encerrando.");
             System.exit(0);
         }
     }
