@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 public class Proprietario {
     
     private String nomeProprietario = "fulano";
@@ -18,20 +20,17 @@ public class Proprietario {
         this.nomeProprietario = nomeProprietario;
     }
 
-    Scanner leitorLogin = new Scanner(System.in);
-
-    public boolean loginProprietario() {
-        System.out.println("Digite o nome do usuario:");
-        String usuario = leitorLogin.nextLine();
-        System.out.println("Digite a senha do usuario:");
-        String senha = leitorLogin.nextLine();
-        leitorLogin.close();
+    public boolean loginProprietario() { // funcao para verificar se o login do proprietario esta correto
         
-        if((nomeProprietario == usuario) && (senhaProprietario == senha)) {
+        String usuario = JOptionPane.showInputDialog("Digite o nome do usuario:");
+        //JOptionPane para escrever a msg e gerar um input para le o valor inserido pelo usuario
+        String senha = JOptionPane.showInputDialog("Digite a senha do usuario:");
+        
+        if((nomeProprietario.equalsIgnoreCase(usuario)) && (senhaProprietario.equalsIgnoreCase(senha))) { 
             return true;
         }else{
             return false;
         }
-    }
+    }// verificando se o login esta correto, funcao equalsIgnoreCase para verificar se as variaveis sao iguais ignorando as cases.
 
 }
