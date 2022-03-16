@@ -34,6 +34,9 @@ public class App {
                 System.out.println("Erro: Escolha invalida!");
             }
         
+        System.out.println("42");
+
+
         if(validacaoMain == true){//verificacao do login
             System.out.println("Usuario conectado.");
         }else{
