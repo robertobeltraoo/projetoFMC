@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Funcionario {
     
     private String nomeFuncionario = "beltrano";
@@ -20,17 +22,14 @@ public class Funcionario {
     public void setNomeFuncionario(String nomeFuncionario) {
         this.nomeFuncionario = nomeFuncionario;
     }
-    
-    Scanner leitorLogin = new Scanner(System.in);
 
     public boolean loginFuncionario() { //funçao para verificar se o login do funcionario está correto
-        System.out.println("Digite o nome do usuario:");
-        String usuario = leitorLogin.nextLine();
-        System.out.println("Digite a senha do usuario:");
-        String senha = leitorLogin.nextLine();
-        leitorLogin.close();
         
-        if((nomeFuncionario == usuario) && (senhaFuncionario == senha)) {
+        String usuario = JOptionPane.showInputDialog("Digite o nome do usuario:");
+       
+        String senha = JOptionPane.showInputDialog("Digite a senha do usuario:");
+        
+        if((nomeFuncionario.equalsIgnoreCase(usuario)) && (senhaFuncionario.equalsIgnoreCase(senha))) {
             return true;
         }else{
             return false;
