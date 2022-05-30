@@ -1,16 +1,16 @@
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
-public class Funcionario {
+public class Funcionario extends Pessoa implements Validacao {
     
-    private String nomeFuncionario = "beltrano";
-    private String senhaFuncionario =  "123";
-    
-    public String getNomeFuncionario() {
-        return nomeFuncionario;
-    }
+    private String senhaFuncionario;
+    private double salarioFuncionario;
 
+    public Funcionario(String nomePessoa, String cpfPessoa, int idadePessoa, String senhaFuncionario, double salarioFuncionario){
+        super(nomePessoa, cpfPessoa, idadePessoa);
+        this.senhaFuncionario = senhaFuncionario;
+        this.salarioFuncionario = salarioFuncionario;
+    }
+    
     public String getSenhaFuncionario() {
         return senhaFuncionario;
     }
@@ -18,18 +18,15 @@ public class Funcionario {
     public void setSenhaFuncionario(String senhaFuncionario) {
         this.senhaFuncionario = senhaFuncionario;
     }
-
-    public void setNomeFuncionario(String nomeFuncionario) {
-        this.nomeFuncionario = nomeFuncionario;
-    }
-
-    public boolean loginFuncionario() { //funçao para verificar se o login do funcionario está correto
+    
+    @Override
+    public boolean login() { //funçao para verificar se o login do funcionario está correto
         
         String usuario = JOptionPane.showInputDialog("Digite o nome do usuario:");
        
         String senha = JOptionPane.showInputDialog("Digite a senha do usuario:");
         
-        if((nomeFuncionario.equalsIgnoreCase(usuario)) && (senhaFuncionario.equalsIgnoreCase(senha))) {
+        if((nomePessoa.equalsIgnoreCase(usuario)) && (senhaFuncionario.equalsIgnoreCase(senha))) {
             return true;
         }else{
             return false;
