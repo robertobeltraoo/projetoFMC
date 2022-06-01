@@ -26,7 +26,7 @@ public class Funcionario extends Pessoa implements Validacao {
        
         String senha = JOptionPane.showInputDialog("Digite a senha do usuario:");
         
-        if((nomePessoa.equalsIgnoreCase(usuario)) && (senhaFuncionario.equalsIgnoreCase(senha))) {
+        if(nomePessoa.equalsIgnoreCase(usuario) && senhaFuncionario.equalsIgnoreCase(senha)) {
             return true;
         }else{
             return false;

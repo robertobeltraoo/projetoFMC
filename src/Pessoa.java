@@ -32,19 +32,5 @@ public class Pessoa {
     public void setNomePessoa(String nomePessoa) {
         this.nomePessoa = nomePessoa;
     }
-
-    //funcao da classe mae q sera sobrescrita nas classes filhas
-    /*public boolean login() { // funcao para verificar se o login do proprietario esta correto
-        
-        String usuario = JOptionPane.showInputDialog("Digite o nome do usuario:");
-        //JOptionPane para escrever a msg e gerar um input para le o valor inserido pelo usuario
-        String senha = JOptionPane.showInputDialog("Digite a senha do usuario:");
-        
-        if(nomePessoa.equalsIgnoreCase(usuario)) { 
-            return true;
-        }else{
-            return false;
-        }
-    }*/
-    
+   
 }

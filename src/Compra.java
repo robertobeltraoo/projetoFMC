@@ -46,7 +46,7 @@ public class Compra {
                 JOptionPane.showMessageDialog(null, "Forma de pagamento aceita.");
                 //if para caso o pagamento seja em dinheiro, para informar o valor do troco    
                 if(formaPag.equalsIgnoreCase(pagamento[2]) && (verifica == false)){
-                    String valorDinheiro = JOptionPane.showInputDialog("Valor dado pelo cliente");
+                    String valorDinheiro = JOptionPane.showInputDialog("Conta: R$"+valorTotal+". \n Valor dado pelo cliente:");
                     //
                     //usar trycatch com java.lang.NumberFormatException para caso a pessoa digite algo diferente de um numero inteiro
                     //
